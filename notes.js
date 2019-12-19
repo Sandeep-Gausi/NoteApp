@@ -14,8 +14,8 @@ function addingNote(title, body){
      var notes = fetchNotes();
 
   var note ={
-      title,
-      body
+      title:title,//title, 
+      body:body   //body
   };
 
   notes.push(note);
@@ -37,7 +37,7 @@ function readNote(title){
     var notes = fetchNotes();
   
     var filternotes = notes.filter((note)=>note.title === title);
-  
+    console.log(filternotes);
    // console.log(`Title:${filternotes[0].title} Body:${filternotes[0].body}`);
    logNote(filternotes[0]);
 }
@@ -51,7 +51,6 @@ var logNote = function(note){
     console.log("*******************************");
     console.log(`Title:${note.title}`);
     console.log(`Body:${note.body}`);
-
 }
 
 module.exports ={

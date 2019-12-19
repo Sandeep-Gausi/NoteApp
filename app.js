@@ -4,6 +4,9 @@ const note = require('./notes');
 const argv = yargs.argv;
 // console.log('Process ' , process.argv);
 // console.log('Yargs ' , yargs.argv);
+// Input - node app read --title "sandy" --body "king"
+// Output - { _: [ 'read' ], title: 'sandy', body: 'king ', '$0': 'app' }
+
 
 var command = yargs.argv._[0];
 var title = yargs.argv.title;
